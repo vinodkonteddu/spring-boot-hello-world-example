@@ -1,0 +1,26 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('checkout'){
+            steps{
+                git branch: 'main', url: 'https://github.com/vinodkonteddu/spring-boot-hello-world-example.git'
+            }
+        }
+        stage('Build '){
+            steps{
+                echo " Build the application "
+                sh " mvn clean install "
+            }
+        }
+        
+    }
+    post{
+        sucess{
+            echo " Build was sucessfull"
+        }
+        failure{
+            echo "Build was failed "
+        }
+    }
+}
