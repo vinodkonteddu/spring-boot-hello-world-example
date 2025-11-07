@@ -17,7 +17,7 @@ pipeline{
     }
     post{
         success{
-            echo "${BUILD_NUMBER} Build was sucessfull"
+            echo "${BUILD_NUMBER}  was sucessfull"
         }
         failure{
             echo "${BUILD_NUMBER} was failed "
