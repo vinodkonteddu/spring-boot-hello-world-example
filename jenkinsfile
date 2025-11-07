@@ -20,7 +20,7 @@ pipeline{
             echo "${BUILD_NUMBER}  was sucessfull"
         }
         failure{
-            echo "${BUILD_NUMBER} was failed "
+            echo "${BUILD_NUMBER} was Failed "
         }
     }
 }
