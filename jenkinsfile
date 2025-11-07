@@ -17,10 +17,10 @@ pipeline{
     }
     post{
         success{
-            echo " Build was sucessfull"
+            echo "${BUILD_NUMBER} Build was sucessfull"
         }
         failure{
-            echo "Build was failed"
+            echo "${BUILD_NUMBER} was failed "
         }
     }
 }
