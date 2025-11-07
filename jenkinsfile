@@ -10,13 +10,13 @@ pipeline{
         stage('Build '){
             steps{
                 echo " Build the application "
-                sh " mvn clean install "
+                sh ' mvn clean install '
             }
         }
         
     }
     post{
-        sucess{
+        success{
             echo " Build was sucessfull"
         }
         failure{
